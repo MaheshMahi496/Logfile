@@ -7,6 +7,8 @@ stage('Check out the code from Git Repository') {// for display purposes
 	  
 	  def v_jenkinsLogPath = "${JENKINS_HOME}\\jobs\\Logfileread\\builds\\${BUILD_NUMBER}\\log"
 	  
+	  file = new File("v_jenkinsLogPath.txt").text
+	  
 	  echo "v_jenkinsLogPath path is :${v_jenkinsLogPath}"
 	  
 	  //modified jenkins file
