@@ -10,7 +10,7 @@ stage('Check out the code from Git Repository') {// for display purposes
 	  echo "v_jenkinsLogPath path is :${v_jenkinsLogPath}"
 	  
 	  //modified jenkins file
-	  def version = readFile "${v_jenkinsLogPath}"
+	  def version = readFile ('log.groovy')
 	  echo "version is : ${v_jenkinsLogPath}"
 	  
  }
