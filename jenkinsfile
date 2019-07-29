@@ -5,12 +5,12 @@ stage('Check out the code from Git Repository') {// for display purposes
       credentialsId: '79715904-7926-40c1-9e75-dea587766745',
       url: 'https://github.com/MaheshMahi496/Logfile.git'
 	  
-	  def v_jenkinsLogPath = "${JENKINS_HOME}\\jobs\\Logfileread\\builds\\${BUILD_NUMBER}\\log"
+	  def v_jenkinsLogPath = "${JENKINS_HOME}\\jobs\\Logfileread\\builds\\${BUILD_NUMBER}\\log.txt"
 	  
 	  echo "v_jenkinsLogPath path is :${v_jenkinsLogPath}"
 	  
 	  //modified jenkins file
-	  def version = readFile "${env.WORKSPACE}/log.txt"
-	  echo"version is : ${env.WORKSPACE}/log.txt"
+	  def version = readFile "${v_jenkinsLogPath}"
+	  
  }
  }
