@@ -9,5 +9,15 @@ stage('Check out the code from Git Repository') {// for display purposes
 	  
 	  echo "v_jenkinsLogPath path is :${v_jenkinsLogPath}"
 	  
+	  //modified jenkins file
+	  myFileName = "log.txt"
+	  myFile = new File(v_jenkinsLogPath + myFileName)
+	  lastLine = myFile.readLines().get(myFile.readLines().size().toInteger() - 1)
+	if (lastLine ==~ /.modified jenkins file.*/ ){
+		println "modified jenkins file"
+		System.exit(1)
+} 		else{
+	println "nothing to see here"
+}
    }
  }
